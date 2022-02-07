@@ -1,7 +1,7 @@
 version: '3.7'
 services:
     web-server:
-        image: yok007/web-server:latest
+        image: mikevoronin/web-server:latest
         ports:
             - 8088:80
         restart: always
@@ -27,4 +27,3 @@ services:
             - "8089:80"
 volumes:
     mysql-data:
-#
