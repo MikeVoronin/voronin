@@ -3,7 +3,7 @@ services:
     web-server:
         image: mikevoronin/web-server:latest
         ports:
-            - 8088:80
+            - 8082:80
         restart: always
 
     mysql-server:
@@ -24,6 +24,6 @@ services:
             PMA_USER: root
             PMA_PASSWORD: secret
         ports:
-            - "8089:80"
+            - "8081:80"
 volumes:
     mysql-data:
