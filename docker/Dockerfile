@@ -1,6 +1,7 @@
-FROM php:7.2-apache
-# Указываем рабочую папку
-WORKDIR /var/www/html
-# Копируем все файлы проекта в контейнер
-COPY . /var/www/html
-EXPOSE 80
+FROM php:7.4.3-apache
+LABEL maintainer="mikevoronin"
+
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+COPY lamp/html/. /var/www/html
+
